@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --red: rgb(255, 9, 9);
+    --white:#fff;
+    --dark:black;
+}
+body{
+    color: var(--dark);
+    background: var(--white);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 40px;
+    box-shadow: 0 0.1rem 0.5rem black;
+    width: 100%;
+    background: var(--dark);
+    transition: all 0.5s;
+    position: fixed;
+}
+.navigation .logo{
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.logo span{
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--red);
+}
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: var(--red);
+}
+.navigation i:hover{
+    color: var(--red);
+    transition: 0.5s;   
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(2),
+.menu .bar:nth-child(3){
+    background: var(--red);
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-image .image {
+    width: 100%;
+    background-size: cover;
+}
+.home-text{
+    max-width: 37rem;
+}
+.home-text .text-h4{
+    font-size: 1.5rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+}
+.home-text .text-h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+.home-text p{
+    margin-bottom: 4rem;
+}
+.home-btn{
+    padding: 15px 45px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.home-btn:hover{
+    background: #fc4c35;
+}
+.home-img img{
+    width: 100%;
+}
+@media (max-width:785px) {
+    .navigation{
+        padding: 10px 15px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--dark);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    /*main*/
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+    .home .text-h4{
+        font-size: 15px;
+    }
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home-img{
+        width: 125%;
+    }
+}
+
+/* -------------------- PARCEIROS -------------------------*/
+/*--------------------------------------------------------*/
+
+.recentes-container, .secao2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.parceiros {
+    padding: 20px;
+}
+
+.titulo-parceiros {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.recentes, .destaques {
+    background: transparent;
+    border-radius: 20px;
+    border: 1px solid var(--white);
+    box-shadow: 0 6px 12px rgba(24, 22, 23, 0.1);
+    text-align: center;
+    width: 260px;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.recentes:hover, .veja-mais:hover {
+    box-shadow: 0 0.1rem 0.5rem black;
+    transition: 0.2s all;
+}
+
+.botao-recentes, .botao-destaques{
+    border: none;
+    background: none;
+}
+
+.img-recentes, .img-destaques {
+    width: 250px;
+    height: 310px;
+    border-radius: 30px;
+}
+
+.seta-botao {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.img-seta {
+    width: 20px;
+    height: 20px;
+    color: #949191c2;
+}
+
+p{
+    font-size: 14px;
+    color: #666;
+}
+
+.veja-mais{
+    border: none;
+    background: var(--red);
+    border-radius: 16px;
+    padding: 10px;
+    color: #fff;
+    margin-top: 20px;
+    width: 150px;
+}
