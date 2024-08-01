@@ -28,12 +28,25 @@ body{
     transition: all 0.5s;
     position: fixed;
 }
+.logo {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.navigation .logo img {
+    width: 100%;
+    height: 100%;
+}
 .navigation .logo{
     font-family: "Bebas Neue", sans-serif;
     color: var(--white);
     font-size: 2.5rem;
     font-weight: 500;
 }
+
 .logo span{
     font-family: "Bebas Neue", sans-serif;
     color: var(--red);
@@ -41,22 +54,26 @@ body{
 .navigation ul{
     display: flex;
     align-items: center;
-    gap: 5rem;
 }
-.navigation ul li a{
+.navigation .list-menu li a{
+    padding: 3rem 1rem 1rem 1rem;
     color: var(--white);
     font-size: 17px;
     font-weight: 500;
-    transition: all 0.5s;
+    transition: all 200ms ease-in;
 }
-.navigation ul li a:hover{
+.navigation .list-menu li a:hover{
+    background-color: #333;
+    border-bottom: 4px solid var(--red);
     color: var(--red);
 }
 .navigation i:hover{
+    background-color: #333;
     color: var(--red);
-    transition: 0.5s;   
+    transition: all 200ms ease-in;   
 }
 .navigation i{
+    padding: 1rem 1rem 1rem 1rem;
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--white);
@@ -138,7 +155,7 @@ body{
     .menu.ativo .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
-    .nav-menu{
+    .list-menu{
         position: fixed;
         right: -100%;
         top: 70px;
@@ -149,7 +166,7 @@ body{
         gap: -10px;
         transition: 0.3s;
     }
-    .nav-menu.ativo{
+    .list-menu.ativo{
         right: 0;
     }
     .nav-item{
@@ -199,50 +216,31 @@ body{
     align-items: center;
     text-align: center;
 }
-.recentes, .destaques {
+.destaques {
     background: transparent;
     border-radius: 20px;
     border: 1px solid var(--white);
     box-shadow: 0 6px 12px rgba(24, 22, 23, 0.1);
     text-align: center;
     width: 260px;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     margin-top: 10px;
 }
-
-.recentes:hover, .veja-mais:hover {
+.veja-mais:hover {
     box-shadow: 0 0.1rem 0.5rem black;
     transition: 0.2s all;
 }
 
-.botao-recentes, .botao-destaques{
+.botao-destaques{
     border: none;
     background: none;
 }
 
-.img-recentes, .img-destaques {
+.img-destaques {
     width: 250px;
     height: 310px;
     border-radius: 30px;
-}
-
-.seta-botao {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.img-seta {
-    width: 20px;
-    height: 20px;
-    color: #949191c2;
-}
-
-p{
-    font-size: 14px;
-    color: #666;
 }
 
 .veja-mais{
