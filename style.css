@@ -107,7 +107,8 @@ body {
     position: relative; /* Mude de absolute para relative */
     height: 100vh; /* Certifique-se de que a altura seja 100% da viewport */
     width: 100vw;
-    background-image: url("./Images/energyBackground.jpg");
+    /*background-image: url("./Images/energyBackground.jpg");*/
+    background-image: linear-gradient(rgba(29, 29, 29, 0.3), rgba(29, 29, 29, 0.3)), url("./Images/energyBackground.jpg");
     background-size: cover;
     background-attachment: fixed;
     z-index: 1; /* Certifique-se de que o z-index é menor que o da section1 */
@@ -281,4 +282,206 @@ body {
 .veja-mais:hover {
     box-shadow: 0 0.1rem 0.5rem black;
     transition: 0.2s all;
+}
+
+/*-------------------------Footer("Rodapé")-------------------------*/
+
+footer {
+    box-shadow: 0 0.1rem 0.5rem black;
+    background-color: black;
+}
+
+.main-content-footer {
+    box-shadow: 0 0.1rem 0.5rem black;
+}
+
+.section-footer {
+    box-shadow: 0 -0.1rem 0.5rem black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.section-bottom-footer {
+    display: flex;
+    padding-top: 4px;
+}
+
+.lower-footer {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.pink-text {
+    padding-top: 10px;
+    margin-left: 320px;
+    font-size: 20px;
+    color: #9A1E5A;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.logos {
+    width: 30px;
+    height: 30px;
+}
+
+.itens-footer {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.itens-footer1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+    padding-top: 40px;
+}
+
+.itens-footer2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+
+.itens-footer p{
+    text-align: justify;
+}
+
+#botao-fixo {
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    background: #fdeaea;
+    color: #fff;
+    border: none;
+    padding: 3px 3px;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#botao-fixo:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3px;
+        height: 100px;
+    }
+    .pesquisar {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .procurar {
+        width: calc(100% - 42px);
+    }
+    .botao-pesquisa {
+        width: 42px;
+    }
+    .lista {
+        width: 89%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+    .itens {
+        margin-left: -30px;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .recentes, .destaques {
+        width: 70%;
+    }
+    .img-preta img {
+        width: 240px;
+    }
+    .seta {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .procurar {
+        width: 100%;
+        height: 16px;
+        border-radius: 12px 0 0 12px;
+    }
+    .botao-pesquisa {
+        border-radius: 0 20px 20px 0;
+        
+    }
+    .pesquisar {
+        width: 100%;
+    }
+    .recentes, .destaques {
+        width: 90%;
+        margin: 20px;
+    }
+    .img-preta img {
+        width: 180px;
+    }
+    .seta {
+        width: 100%;
+        display: none;
+     
+    }
+
+    footer {
+        margin: 2rem;
+    }
+
+    .main-content-footer{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+
+    .section-bottom-footer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+    }
+
+    .itens-footer {
+        display: flex;
+        align-items: start;
+        
+        gap: 0.5rem;
+        margin-bottom: 20px;
+    }
+
+    .pink-text {
+        padding-top: 10px;
+        margin-left: 0rem;
+        font-size: 1.5rem;
+        color: #9A1E5A;
+        font-family: 'Architects Daughter', cursive;
+    }
 }
