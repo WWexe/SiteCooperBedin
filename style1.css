@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --red: rgb(255, 9, 9);
+    --white: #fff;
+    --dark: #000;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Bebas Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    list-style: none;
+    text-decoration: none;
+}
+
+body, html {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body {
+    color: var(--dark);
+    background: var(--white);
+}
+
+header.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 10px;
+    box-shadow: 0 0.1rem 0.5rem black;
+    width: 100%;
+    background: var(--dark);
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+.logo-text {
+    font-family: var(--font-secondary);
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.logo-text span {
+    font-family: var(--font-secondary);
+    color: var(--red);
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+}
+
+.navigation .list-menu li a {
+    padding: 10px;
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 200ms ease-in;
+}
+
+.navigation .list-menu li a:hover {
+    background-color: #333;
+    border-bottom: 4px solid var(--red);
+    color: var(--red);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--white);
+    margin: 6px auto;
+    transition: all 0.3s;
+}
+
+.back-main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(29, 29, 29, 0.3), rgba(29, 29, 29, 0.3)), url("./Images/energyBackground.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.icon-main {
+    width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+}
+
+.section1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.section1 .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.section1 h1 {
+    color: var(--red);
+    font-size: 3rem;
+}
+
+.section1 h2 {
+    font-size: 1.25rem;
+    margin: 0 2rem;
+}
+
+.btn button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s all;
+    border: none;
+}
+
+.btn .sobre-nos {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.btn .contato {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.btn button:hover {
+    box-shadow: 0 0.1rem 0.5rem white;
+}
+
+main {
+    flex: 1; 
+    padding: 20px;
+    box-sizing: border-box; 
+    background-color: var(--white);
+}
+
+.parceiros {
+    padding: 20px;
+    background-color: var(--white);
+    text-align: center;
+    min-height: calc(100vh - 160px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-parceiros {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.secao2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.destaques {
+    background: transparent;
+    border-radius: 20px;
+    border: 1px solid var(--white);
+    box-shadow: 0 6px 12px rgba(24, 22, 23, 0.1);
+    text-align: center;
+    width: 260px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 200px; 
+}
+
+.botao-destaques {
+    border: none;
+    background: none;
+}
+
+.img-destaques {
+    width: 100%;
+    height: 150px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.veja-mais {
+    border: none;
+    background: var(--red);
+    border-radius: 16px;
+    padding: 10px;
+    color: var(--white);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 150px;
+    transition: 0.2s all;
+}
+
+.veja-mais:hover {
+    box-shadow: 0 0.1rem 0.5rem black;
+}
+
+footer {
+    background: var(--dark);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.8);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.main-content-footer {
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1230px) {
+    .navigation {
+        /*flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 20%;*/
+        padding: 6px 60px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .navigation {
+        padding: 20px;
+    }
+    
+    .icon-main {
+        width: 80%;
+    }
+
+    .section1 h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navigation {
+        padding: 10px 15px;
+    }
+
+    .section1 h1 {
+        font-size: 2rem;
+    }
+
+    .section1 h2 {
+        font-size: 1rem;
+    }
+
+    .btn button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 930px) {
+    .navigation .list-menu {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .menu-toggle .one,
+    .menu-toggle .two,
+    .menu-toggle .three {
+        width: 80%;
+        height: 2px;
+        background-color: var(--white);
+        margin: 6px auto;
+        transition-duration: 0.5s;
+    }
+}
+
+@media (max-width: 768px) {
+    .secao2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .list-menu {
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        width: 100%;
+        height: calc(100% - 60px);
+        flex-direction: column;
+        background: var(--dark);
+        gap: 10px;
+        transition: 0.3s;
+    }
+
+    .list-menu.ativo {
+        right: 0;
+    }
+
+    .list-menu li {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .section1 {
+        padding: 20px;
+    }
+
+    .section1 .main-content {
+        padding: 10px;
+    }
+
+    .destaques {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .img-destaques {
+        height: auto;
+    }
+
+    .veja-mais {
+        max-width: 200px;
+    }
+}
