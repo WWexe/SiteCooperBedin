@@ -160,6 +160,17 @@ main {
 }
 
 .parceiros {
+    padding: 20px;
+    background-color: var(--white);
+    text-align: center;
+    min-height: calc(100vh - 160px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*.parceiros {
     width: 90%;
     margin-top: 2rem;
     display: grid;
@@ -167,7 +178,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 30px;
-}
+}*/
 
 .titulo-parceiros {
     text-align: center;
@@ -187,11 +198,11 @@ main {
     border-radius: 20px;
     border: 1px solid var(--white);
     box-shadow: 0 6px 12px rgba(24, 22, 23, 0.1);
-    align-items: center;
     text-align: center;
     width: 260px;
-    padding: 1px;
-    margin: 2px;
+    padding: 10px;
+    margin: 10px;
+    min-width: 200px; 
 }
 
 .botao-destaques {
@@ -299,7 +310,9 @@ footer {
     .main {
         display: block;
     }
-
+    .icon-main {
+        width: 80%;
+    }
     .navigation {
         flex-direction: column;
         justify-content: center;
