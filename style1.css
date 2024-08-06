@@ -72,6 +72,10 @@ header.navigation {
     align-items: center;
 }
 
+.menu-toggle {
+    cursor: pointer;
+}
+
 .navigation .list-menu li a {
     padding: 10px;
     color: var(--white);
