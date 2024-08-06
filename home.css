@@ -27,8 +27,8 @@ body {
 
 html {
     scroll-behavior: smooth;
-    background-color: black;
-}
+    background-color: black
+} 
 
 header.navigation {
     display: flex;
@@ -37,7 +37,7 @@ header.navigation {
     padding: 0px 20px;
     box-shadow: 0 0.1rem 0.5rem black;
     width: 100%;
-    background: var(--dark);
+    background-color: rgba(0, 0, 0, 0.7);;
     transition: all 0.5s;
     position: fixed;
     top: 0;
@@ -71,6 +71,7 @@ header.navigation {
 .navigation ul {
     display: flex;
     align-items: center;
+    height: 50px;
 }
 
 .navigation .list-menu {
@@ -81,13 +82,13 @@ header.navigation {
 .navigation .list-menu li a {
     padding: 10px;
     color: var(--white);
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     transition: all 200ms ease-in;
 }
 
-.navigation .list-menu li a:hover {
-    background-color: #333;
+.navigation .list-menu li a:hover{
+    background-color: #000000;
     border-bottom: 4px solid var(--red);
     color: var(--red);
 }
@@ -327,11 +328,14 @@ footer {
     .icon-main {
         width: 80%;
     }
-    .navigation {
+    .list-menu {
+        height: 20%;
+    }
+    header.navigation {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 10%;
+        height: 110px;
         padding: 10px 10px;
         }
 }
@@ -354,7 +358,7 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .navigation {
+    header.navigation {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
