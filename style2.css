@@ -73,6 +73,11 @@ header.navigation {
     align-items: center;
 }
 
+.navigation .list-menu {
+    display: flex;
+    align-items: center;
+}
+
 .navigation .list-menu li a {
     padding: 10px;
     color: var(--white);
@@ -381,7 +386,7 @@ footer {
         left: 0;
         bottom: 0;
         height: 100vh;
-        background-color: rgba(30, 31, 30, 0.8);
+        background-color: rgba(0, 0, 0, 0.2);
         z-index: 10;
         display: flex;
         justify-content: center;
@@ -398,10 +403,14 @@ footer {
         top: 30px;
     }
 
-    .navigation.on .list-menu li {
-        display: block;
-        margin: 15px 0;
-        font-size: 18px;
+    .navigation.on .list-menu{
+        display: flex;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
     }
 }
 
