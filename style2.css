@@ -25,6 +25,11 @@ body {
     background: var(--white);
 }
 
+html {
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
 header.navigation {
     display: flex;
     align-items: center;
@@ -368,6 +373,35 @@ footer {
     .menu-toggle {
         display: flex;
         flex-direction: column;
+    }
+
+    .navigation.on {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh;
+        background-color: rgba(30, 31, 30, 0.8);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navigation.on .logo {
+        display: none;
+    }
+
+    .navigation.on .menu-toggle {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+    }
+
+    .navigation.on .list-menu li {
+        display: block;
+        margin: 15px 0;
+        font-size: 18px;
     }
 }
 
