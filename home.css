@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --red: rgb(255, 9, 9);
+    --white: #fff;
+    --dark: #000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +15,19 @@
     text-decoration: none;
 }
 
+img {
+    display: flex;
+    width: 100%;
+  }
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
 body, html {
     overflow-x: hidden;
     min-height: 100vh;
-}
-
-:root {
-    --red: rgb(255, 9, 9);
-    --white: #fff;
-    --dark: #000;
 }
 
 body {
@@ -37,7 +47,7 @@ header.navigation {
     padding: 0px 20px;
     box-shadow: 0 0.1rem 0.5rem black;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);;
+    background-color: rgba(0, 0, 0, 0.7);
     transition: all 0.5s;
     position: fixed;
     top: 0;
@@ -321,7 +331,7 @@ footer {
     transform: scale(1.1);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .main {
         display: block;
     }
@@ -340,10 +350,6 @@ footer {
         }
 }
 @media (max-width: 992px) {
-    .navigation {
-        padding: 10px 15px;
-    }
-
     .section1 h1 {
         font-size: 2rem;
     }
@@ -357,7 +363,7 @@ footer {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     header.navigation {
         display: flex;
         flex-direction: row;
@@ -374,7 +380,7 @@ footer {
     .three {
         width: 80%;
         height: 2px;
-        background-color: white;
+        background-color: rgb(0, 0, 0);
         margin: 6px auto;
         transition-duration: 0.3s;
         padding: 0px;
@@ -435,7 +441,7 @@ footer {
     .list-menu {
         position: fixed;
         right: -100%;
-        top: 60px;
+        top: 20px;
         width: 100%;
         height: calc(100% - 60px);
         flex-direction: column;
