@@ -127,6 +127,18 @@ header.navigation {
     z-index: 1;
 }
 
+.back-main h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+}
+
 .icon-main {
     width: 650px;
     position: absolute;
