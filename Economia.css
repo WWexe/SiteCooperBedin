@@ -210,13 +210,22 @@ main {
     position: absolute;
     bottom: -8px;
     left: 0;
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
 .form-content button {
     background-color: #d50000f1;
     color: var(--white);
-
-
+}
+.form-economy button {
+    background: linear-gradient(120deg, red 0%, #d50000f1 100%);    
+    color: var(--white);
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 14px;
 }
 /*--------------Footer---------------*/
 
