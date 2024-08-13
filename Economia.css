@@ -124,9 +124,10 @@ header.navigation {
     transition: all 0.3s;
 }
 
+
 .back-main {
     position: relative;
-    height: 50vh; /* Alterado de 100vh para 50vh */
+    height: 50vh;
     width: 100%;
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("./Images/Economia.png");
     background-size: cover;
@@ -142,8 +143,15 @@ header.navigation {
     transform: translate(-50%, -50%);
     color: var(--white);
     font-size: 4rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
     font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     text-align: center;
 }
 
@@ -166,7 +174,7 @@ main {
 /*--------------Footer---------------*/
 
 footer {
-    margin-top: 20px; /* Ajuste conforme necessário */
+    margin-top: 20px;
     padding: 10px;
     background: var(--dark);
     color: var(--white);

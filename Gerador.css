@@ -28,11 +28,18 @@ a {
 body, html {
     overflow-x: hidden;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body {
     color: var(--dark);
     background: var(--white);
+}
+
+main {
+    flex: 1;
 }
 
 html {
@@ -119,11 +126,12 @@ header.navigation {
 
 .back-main {
     position: relative;
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
     background-image: linear-gradient(rgba(29, 29, 29, 0.3), rgba(29, 29, 29, 0.3)), url("./Images/geradorBackground.jfif");
     background-size: cover;
     background-attachment: fixed;
+    background-position-y: -22rem;
     z-index: 1;
 }
 
@@ -138,7 +146,17 @@ header.navigation {
     font-family: 'Bebas Neue', sans-serif;
     text-align: center;
 }
+.content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
 
+.tittle_main {
+    text-align: center;
+    font-size: 2rem; 
+    color: var(--dark); 
+}
 .icon-main {
     width: 650px;
     position: absolute;
