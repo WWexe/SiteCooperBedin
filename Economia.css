@@ -29,6 +29,8 @@ main {
     flex: 1;
 }
 
+
+
 body, html {
     overflow-x: hidden;
     min-height: 100vh;
@@ -170,9 +172,11 @@ main {
     box-sizing: border-box; 
     background-color: var(--white);
 }
+
 .formulario {
     background-color: rgb(255, 255, 255);
     border-radius: 14px;
+    align-items: flex-start;
     margin: 14px;
     max-width: 600px;
     width: 100%;

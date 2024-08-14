@@ -43,13 +43,16 @@ function checkInputvalorEnergia() {
 }
 function checkInputnumero() {
     const numeroValue = numero.value;
+
     if(numeroValue === ""){
         errorInput(numero, "Informe um Numero válido")
+    }else if(numeroValue.length < 11) {
+        errorInput(numero, "Seu Numero dever ter DD + 9 digitos");
     }else {
         const formItem = numero.parentElement;
         formItem.className = "form-content"
         console.log(numeroValue)
-    }
+    }   
 }
 function errorInput(input, message){
     const formItem = input.parentElement;
