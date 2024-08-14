@@ -171,7 +171,7 @@ main {
     background-color: var(--white);
 }
 .formulario {
-    background-color: rgb(227, 227, 227);
+    background-color: rgb(255, 255, 255);
     border-radius: 14px;
     margin: 14px;
     max-width: 600px;
@@ -227,6 +227,7 @@ main {
     border-color: red;
 }
 .form-content.error a {
+    font-weight: 600;
     color: red;
     visibility: visible;
 }
