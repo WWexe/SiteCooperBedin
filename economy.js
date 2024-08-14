@@ -9,36 +9,47 @@ form.addEventListener("submit", (event) => {
     checkInputEmail();
     checkInputvalorEnergia();
     checkInputnumero();
-    
 });
 
 function checkInputUsername() {
     const usernameValue = username.value;
     if(usernameValue === ""){
         errorInput(username, "Informe um Nome válido")
-    }
+    }else {
+        const formItem = username.parentElement;
+        formItem.className = "form-content"
         console.log(usernameValue)
+    }
 }
 function checkInputEmail() {
     const emailValue = email.value;
     if(emailValue === ""){
         errorInput(email, "Informe um Email válido")
-    }
+    }else {
+        const formItem = email.parentElement;
+        formItem.className = "form-content"
         console.log(emailValue)
+    }
 }
 function checkInputvalorEnergia() {
     const valorEnergiaValue = valorEnergia.value;
     if(valorEnergiaValue === ""){
         errorInput(valorEnergia, "Informe um Valor válido")
-    }
+    }else {
+        const formItem = valorEnergia.parentElement;
+        formItem.className = "form-content"
         console.log(valorEnergiaValue)
+    }
 }
 function checkInputnumero() {
     const numeroValue = numero.value;
     if(numeroValue === ""){
         errorInput(numero, "Informe um Numero válido")
-    }
+    }else {
+        const formItem = numero.parentElement;
+        formItem.className = "form-content"
         console.log(numeroValue)
+    }
 }
 function errorInput(input, message){
     const formItem = input.parentElement;
