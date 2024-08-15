@@ -31,66 +31,75 @@
     <div class="back-main">
         <h1>Economia Sustentavel</h1>
     </div>
-    <main>
-        <section class="forms">
-            <div class="content">
-                <h1>Simule sua Economia</h1>
+    <div class="content">
+        <h1>Simule sua Economia</h1>
+    </div>
+<body>
+  <main>
+    <div class="wrapper">
+      <div class="side-text">
+        <p>Texto que ficará do lado esquerdo da tela. Pode adicionar qualquer conteúdo aqui.</p>
+      </div>
+
+      <div class="container">
+        <section class="header">
+          <h2>Nova conta</h2>
+        </section>
+
+        <form id="form" class="form">
+          <div class="form-content">
+            <label for="username">Nome do usuário</label>
+            <input type="text" id="username" placeholder="Nome Completo" />
+            <a>Informe um nome válido</a>
+          </div>
+
+          <div class="form-content">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Seu Email" />
+            <a>Informe um Email válido</a>
+          </div>
+
+          <div class="form-content">
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha..." />
+            <a>Aqui vai a mensagem de erro....</a>
+          </div>
+
+          <div class="form-content">
+            <label for="password-confirmation">Confirmação de senha</label>
+            <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente..." />
+            <a>Aqui vai a mensagem de erro....</a>
+          </div>
+
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="main-content-footer">
+        <section class="section-footer">
+            <div class="itens-footer1">
+                <p>Rua Mitugoro Tanaka, 85, Parque Industrial, Toledo/PR, Sala 2</p>
             </div>
-            <div class="formulario">
-                    <section class="form-header">
-                        <h2>Simulacao de Economia</h2>
-                    </section>
-                
-                <form id="form-economy" class="form-economy">
-                    <div class="form-content">
-                        <label for="username">Nome Completo</label>
-                        <input type="text" id="username" placeholder="Digite seu Nome Completo"/>
-                        <a>Digite um nome Válido</a>
-                    </div>
-                    <div class="form-content">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Digite seu Email"/>
-                        <a>Digite um Email Válido</a>
-                    </div>
-                    <div class="form-content">
-                        <label for="value">Digite o valor da sua conta de luz</label>
-                        <input type="value" id="valor-energia" placeholder="Informe o valor da sua conta de luz"/>
-                        <a>Digite um valor Válido</a>
-                    </div>
-                    <div class="form-content">
-                        <label for="value">Celular</label>
-                        <input type="value" id="numero" placeholder="DD999999999"/>
-                        <a>Digite um numero Válido</a>
-                    </div>
-                    <button type="submit">Calcular Economia</button>
-                </form>
+            <div class="itens-footer">
+                <p>45 99114-5983</p>
+            </div>
+            <div class="itens-footer">
+                <p>@cooperativabedin</p>
+            </div>
+            <div class="itens-footer">
+                <p>contato@cooperbedin.com.br</p>
             </div>
         </section>
-    </main>
-    <footer>
-        <div class="main-content-footer">
-            <section class="section-footer">
-                <div class="itens-footer1">
-                    <p>Rua Mitugoro Tanaka, 85, Parque Industrial, Toledo/PR, Sala 2</p>
-                </div>
-                <div class="itens-footer">
-                    <p>45 99114-5983</p>
-                </div>
-                <div class="itens-footer">
-                    <p>@cooperativabedin</p>
-                </div>
-                <div class="itens-footer">
-                    <p>contato@cooperbedin.com.br</p>
-                </div>
-            </section>
-            <section class="section-footer">
-                <div class="itens-footer">
-                    <p>COPYRIGHT ©2023, COOPER BEDIN - COOPERATIVA DE ENERGIAS RENOVÁVEIS - TODOS OS DIREITOS RESERVADOS.</p>
-                </div>
-            </section>
-        </div>
-    </footer>
-    <script src="sobre.js"></script>
-    <script src="economy.js"></script>
+        <section class="section-footer">
+            <div class="itens-footer">
+                <p>COPYRIGHT ©2023, COOPER BEDIN - COOPERATIVA DE ENERGIAS RENOVÁVEIS - TODOS OS DIREITOS RESERVADOS.</p>
+            </div>
+        </section>
+    </div>
+  </footer>
+  <script src="sobre.js"></script>
+  <script src="economy.js"></script>
 </body>
 </html>
