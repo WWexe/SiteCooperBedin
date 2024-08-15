@@ -126,12 +126,12 @@ header.navigation {
 
 .back-main {
     position: relative;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./Images/cooperado.jfif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./Images/cooperado.jpg");
     background-size: cover;
     background-attachment: fixed;
-    background-position-y: -22rem;
+    background-position: center;
     z-index: 1;
 }
 .back-main h1 {
