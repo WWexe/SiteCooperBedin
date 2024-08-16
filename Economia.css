@@ -34,7 +34,6 @@ header {
   left: 0;
 }
 
-
 .logo {
   display: flex;
   align-items: center;
@@ -212,18 +211,18 @@ main {
   border-radius: 14px;
   margin: 14px;
   max-width: 600px;
-  width: 50%; /* Ajusta a largura da container */
+  width: 50%;
   box-sizing: border-box;
   overflow: hidden;
-  order: 2; /* Garante que a container fique à direita */
+  order: 2; 
 }
 .side-text {
   color: #000000;
   margin: 14px;
   max-width: 600px;
-  width: 50%; /* Ajusta a largura do texto lateral */
+  width: 50%; 
   padding: 20px;
-  order: 1; /* Garante que o texto fique à esquerda */
+  order: 1; 
 }
 
 .header{
