@@ -7,27 +7,45 @@
     <title>Cooperativa Bedin</title>
   </head>
   <body>
-    <header class="navigation">
-        <div class="logo">
-            <img src="./Images/whiteLogo.png" alt="Logo Cooperativa Bedin">
-            <a href="#" class="logo-text">COOPERATIVA<span>
-                BEDIN</span></a>
-        </div>
-        <nav>
-            <ul class="list-menu">
-                <li><a href="home.html">Início</a></li>
-                <li><a href="Economia.html">Simule sua Economia</a></li>
-                <li><a href="Cooperado.html">Quero ser Parceiro</a></li>
-                <li><a href="Gerador.html">Quero ser Gerador</a></li>
-                <li><a href="Sobre.html">Sobre Nós</a></li>
-            </ul>
+    <!-------------------------HEADER-NAVIGATION----------------------------->
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="./images/whiteLogo.png" alt="Logo Cooperativa Bedin">
+                <h1>COOPER<span> BEDIN</span></h1>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="home.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="Economia.html" class="nav-link">Simule sua Economia</a></li>
+                    <li class="nav-item"><a href="Cooperado.html" class="nav-link">Seja Cooperado</a></li>
+                    <li class="nav-item"><a href="Gerador.html" class="nav-link">Seja Parceiro</a></li>
+                    <li class="nav-item"><a href="Sobre.html" class="nav-link"> Sobre Nós</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="images/menu_white_36dp.svg" alt=""></button>
+            </div>
         </nav>
-        <div class="menu-toggle">
-            <span class="one"></span>
-            <span class="two"></span>
-            <span class="three"></span>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="home.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="Economia.html" class="nav-link">Simule sua Economia</a></li>
+                <li class="nav-item"><a href="Cooperado.html" class="nav-link">Seja Cooperado</a></li>
+                <li class="nav-item"><a href="Gerador.html" class="nav-link">Seja Parceiro</a></li>
+                <li class="nav-item"><a href="Sobre.html" class="nav-link">Sobre Nós</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
         </div>
     </header>
+    <script src="mobileNav.js"></script>
+<!------------------------------MAIN-CONTENT---------------------------------->
     <div class="back-main">
         <h1>Seja Parceiro<span> Bedin</span></h1>
     </div>

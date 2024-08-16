@@ -1,32 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
 
 :root {
-    --red: rgb(255, 9, 9);
+    --red: rgba(255, 9, 9, 0.86);
     --white: #fff;
     --dark: #000;
 }
 
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    list-style: none;
-    text-decoration: none;
-}
-
-img {
-    display: flex;
-    width: 100%;
-  }
-
-a {
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-main {
-    flex: 1;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 body, html {
@@ -34,95 +17,138 @@ body, html {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
-body {
-    color: var(--dark);
-    background: var(--white);
-}
+/*--------------- HEADER NAVIGATION ---------------*/
 
-html {
-    scroll-behavior: smooth;
-    background-color: black
-} 
-
-header.navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 20px;
-    box-shadow: 0 0.1rem 0.5rem black;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: all 0.5s;
+header {
+    background-color: var(--dark);
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1000;
+    width: 100%;
 }
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 6rem;
+  top: 0;
+  left: 0;
+}
+
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
 }
 
 .logo img {
-    width: 60px;
-    height: auto;
+  width: 40px;
+  height: auto;
 }
 
-.logo-text {
-    font-family: "Bebas Neue", sans-serif;
-    color: var(--white);
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-left: 10px;
+.logo span {
+  font-family: "Bebas Neue", sans-serif;
+  color: red;
 }
 
-.logo-text span {
-    font-family: "Bebas Neue", sans-serif;
-    color: var(--red);
+.nav-list {
+  display: flex;
+  align-items: center;
 }
 
-.navigation ul {
-    display: flex;
-    align-items: center;
-    height: 50px;
+.nav-list ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
-.navigation .list-menu {
-    display: flex;
-    align-items: center;
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
 }
 
-.navigation .list-menu li a {
-    padding: 10px;
-    color: var(--white);
-    font-size: 15px;
-    font-weight: 500;
-    transition: all 200ms ease-in;
+.nav-bar .nav-list li a {
+  padding: 19px 15px 19px 15px;
+  color: var(--white);
+  font-weight: 500;
+  transition: all 200ms ease-in;
 }
 
-.navigation .list-menu li a:hover{
-    background-color: #000000;
-    border-bottom: 4px solid var(--red);
-    color: var(--red);
+.nav-list ul li a:hover {
+  background-color: #2b2b2b;
+  border-bottom: 4px solid red;
 }
-.menu-toggle {
+.login-button button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: var(--red);
+}
+
+.login-button button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.mobile-menu-icon {
     display: none;
-    cursor: pointer;
 }
 
-.menu-toggle span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    border-radius: 3px;
-    background: var(--white);
-    margin: 3px auto;
-    transition: all 0.3s;
+.mobile-menu {
+    display: none;
 }
+
+@media screen and (max-width: 991px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
+
+/*---------------MAIN-CONTENT----------------*/
 
 .back-main {
     position: relative;
