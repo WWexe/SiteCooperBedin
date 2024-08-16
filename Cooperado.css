@@ -153,7 +153,7 @@ header {
 .back-main {
     position: relative;
     height: 50vh;
-    width: 100%;
+    width: 100%;        
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./Images/cooperado.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -283,6 +283,7 @@ footer {
     .icon-main {
         width: 80%;
     } 
+}
 
 @media (max-width: 768px) {
     .section1 {
@@ -295,11 +296,14 @@ footer {
     }
 }
 
+
+
 @media (max-width: 480px) {
     html {
         font-size: 80%;
     }
+
     .itens-footer, .itens-footer1, .itens-footer2 {
-        font-size: 8px;
-    }   
+        font-size: 7px;
+    }
 }
