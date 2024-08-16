@@ -31,11 +31,10 @@ header {
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  padding: 0.75rem 6rem;
+  padding: 0.6rem 5rem;
   top: 0;
   left: 0;
 }
-
 
 .logo {
   display: flex;
@@ -70,13 +69,13 @@ header {
 
 .nav-link {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #fff;
   font-weight: 500;
 }
 
 .nav-bar .nav-list li a {
-  padding: 19px 15px 19px 15px;
+  padding: 23px 15px 17px 15px;
   color: var(--white);
   font-weight: 500;
   transition: all 200ms ease-in;
@@ -97,7 +96,7 @@ header {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .mobile-menu-icon {
