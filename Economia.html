@@ -27,7 +27,6 @@
           <div class="login-button">
               <button><a href="#">Entrar</a></button>
           </div>
-
           <div class="mobile-menu-icon">
               <button onclick="menuShow()"><img class="icon" src="images/menu_white_36dp.svg" alt=""></button>
           </div>
@@ -40,16 +39,16 @@
             <li class="nav-item"><a href="Cooperado.html" class="nav-link">Sou Cooperado</a></li>
             <li class="nav-item"><a href="Gerador.html" class="nav-link">Seja Parceiro</a></li>
             <li class="nav-item"><a href="Sobre.html" class="nav-link"> Sobre Nós</a></li>
-          </ul>
+          </ul> 
           <div class="login-button">
               <button><a href="#">Entrar</a></button>
           </div>
       </div>
   </header>
   <script src="mobileNav.js"></script>
-<!------------------------------MAIN-CONTENT---------------------------------->
+<!------------------------------MAIN-CONTENT------------------------------->
     <div class="back-main">
-        <h1>Economia Sustentavel</h1>
+        <h1>Simule sua Economia</h1>
     </div>
     <div class="content">
         <h1>Simule sua Economia</h1>
@@ -68,27 +67,19 @@
 
         <form id="form" class="form">
           <div class="form-content">
-            <label for="username">Nome do usuário</label>
+            <label for="username">Nome Completo</label>
             <input type="text" id="username" placeholder="Nome Completo" />
             <a>Informe um nome válido</a>
           </div>
-
           <div class="form-content">
-            <label for="email">Email</label>
+            <label for="email">Seu melhor Email</label>
             <input type="email" id="email" placeholder="Seu Email" />
             <a>Informe um Email válido</a>
           </div>
-
           <div class="form-content">
-            <label for="password">Senha</label>
-            <input type="password" id="password" placeholder="Digite sua senha..." />
-            <a>Aqui vai a mensagem de erro....</a>
-          </div>
-
-          <div class="form-content">
-            <label for="password-confirmation">Confirmação de senha</label>
-            <input type="password" id="password-confirmation" placeholder="Digite sua senha novamente..." />
-            <a>Aqui vai a mensagem de erro....</a>
+            <label for="mobile">Celular</label>
+            <input type="text" id="mobile" maxlength="13" placeholder="DD 99999-9999" />
+            <a>Informe um numero válido</a>
           </div>
 
           <button type="submit">Cadastrar</button>
@@ -119,7 +110,6 @@
         </section>
     </div>
   </footer>
-  <script src="sobre.js"></script>
-  <script src="economy.js"></script>
+  <script src="economia.js"></script>
 </body>
 </html>
