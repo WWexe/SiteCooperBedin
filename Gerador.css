@@ -152,10 +152,11 @@ header {
 .back-main {
     position: relative;
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     background-image: linear-gradient(rgba(29, 29, 29, 0.3), rgba(29, 29, 29, 0.3)), url("./Images/geradorBackground.jfif");
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     background-position-y: -22rem;
     z-index: 1;
 }
