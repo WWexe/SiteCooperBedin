@@ -194,11 +194,11 @@ body {
 
 main {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -239,7 +239,7 @@ main {
 
 .form-content{
   margin-bottom: 8px;
-  padding-bottom: 18px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -272,7 +272,7 @@ input[type="number"] {
 
 .form-content a{
   position: absolute;
-  bottom: -8px;
+  bottom: -4px;
   left: 0;
   visibility: hidden;
 }
