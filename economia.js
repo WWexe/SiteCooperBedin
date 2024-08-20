@@ -45,14 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkInputEmail() {
         const emailValue = email.value.trim(); 
     
-        // Expressão regular que não permite letras maiúsculas
         const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.(com|cn|net)$/;
     
-        // Verifica se o e-mail está vazio
         if (emailValue === "") {
             errorInput(email, "Informe um E-mail válido!");
         } 
-        // Verifica se o e-mail corresponde ao padrão
         else if (!emailPattern.test(emailValue)) {
             errorInput(email, "Informe um e-mail válido");
         } else {
