@@ -18,6 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     energia.addEventListener('input', checkInputEnergia);
   
+    username.addEventListener('blur', checkInputUsername);
+    email.addEventListener('blur', checkInputEmail);
+    mobile.addEventListener('blur', checkInputMobile);
+    energia.addEventListener('blur', checkInputEnergia);
+  
     function formatPhone(event) {
         let value = event.target.value.replace(/\D/g, ''); 
   
@@ -32,12 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     function checkInputUsername() {
-        const usernameValue = username.value;
-  
+        const usernameValue = username.value.trim();
+        const formItem = username.parentElement;
+
         if (usernameValue === "") {
             errorInput(username, "Informe seu nome");
         } else {
-            const formItem = username.parentElement;
             formItem.className = "form-content";
         }
     }
@@ -48,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Expressão regular que não permite letras maiúsculas
         const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.(com|cn|net)$/;
     
+        const formItem = email.parentElement;
+
         // Verifica se o e-mail está vazio
         if (emailValue === "") {
             errorInput(email, "Informe um E-mail válido!");
@@ -56,18 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (!emailPattern.test(emailValue)) {
             errorInput(email, "Informe um e-mail válido");
         } else {
-            const formItem = email.parentElement;
             formItem.className = "form-content";
         }
     }
   
     function checkInputMobile() {
-        const mobileValue = mobile.value;
-  
+        const mobileValue = mobile.value.trim();
+        const formItem = mobile.parentElement;
+
         if (mobileValue.length <= 12) { 
             errorInput(mobile, "Informe um número de telefone válido");
         } else {
-            const formItem = mobile.parentElement;
             formItem.className = "form-content";
         }
     }
@@ -108,11 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function errorInput(input, message) {
         const formItem = input.parentElement;
         const textMessage = formItem.querySelector("a");
-  
-        if(input === document.activeElement) {
+
+        // Exibe a mensagem de erro apenas se o campo foi interagido
+        if (input === document.activeElement) {
             textMessage.innerText = message;
             formItem.className = "form-content error";
         }
     }
-  });
-  
+});

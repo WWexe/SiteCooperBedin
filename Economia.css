@@ -272,7 +272,7 @@ input[type="number"] {
 
 .form-content a{
   position: absolute;
-  bottom: -4px;
+  bottom: -10px;
   left: 0;
   visibility: hidden;
 }
