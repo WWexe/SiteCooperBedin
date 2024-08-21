@@ -58,7 +58,8 @@
     <div class="wrapper">
       <div class="side-text">
         <h1>Energia Limpa Mais Barata</h1>
-        <p>Texto que ficará do lado esquerdo da tela. Pode adicionar qualquer conteúdo aqui.</p>
+        <h4>Sua economia começa em 15% na bandeira <span id="verde">verde</span>, chegando até 25% na bandeira de <span id="vermelho">escassez hídrica</span>
+        </h4>
       </div>
       <div class="container">
         <section class="header">
@@ -82,8 +83,13 @@
           </div>
           <div class="form-content">
             <label for="valor">Valor Mensal Conta de Luz</label>
-            <input type="text" id="energia" maxlength="10" placeholder="Valor mensal da sua conta de energia"/>
+            <input type="number" id="energia" maxlength="10" placeholder="Valor mensal da sua conta de energia"/>
             <a>Informe um numero válido</a>
+          </div>
+          <div class="form-content">
+            <label for="result" class="result-t">Economia Anual Aproximada</label>
+            <span class="text-result">R$</span>
+            <input type="text" id="resultado" maxlength="10" readonly/>
           </div>
           <button type="submit">Cadastrar</button>
         </form>

@@ -4,36 +4,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById("email");
     const mobile = document.getElementById("mobile");
     const energia = document.getElementById("energia");
-  
+    const inputField = document.getElementById('energia');
+    const resultField = document.getElementById('resultado');
+
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         checkForm();
     });
-  
+
+    inputField.addEventListener('input', () => {
+        const inputValue = parseFloat(inputField.value) || 0;
+        const result = inputValue + (inputValue * 0.2);
+        resultField.value = result.toFixed(2);
+    });
+
     username.addEventListener('input', checkInputUsername);
     email.addEventListener('input', checkInputEmail);
-    mobile.addEventListener('input', () => {
+    mobile.addEventListener('input', (event) => {
         formatPhone(event);
         checkInputMobile();
     });
     energia.addEventListener('input', checkInputEnergia);
-  
+
     function formatPhone(event) {
-        let value = event.target.value.replace(/\D/g, ''); 
-  
+        let value = event.target.value.replace(/\D/g, '');
+
         if (value.length > 2) {
             value = value.replace(/^(\d{2})(\d)/g, '$1 $2');
         }
         if (value.length > 7) {
-            value = value.replace(/(\d{5})(\d{1,4})$/, '$1-$2'); 
+            value = value.replace(/(\d{5})(\d{1,4})$/, '$1-$2');
         }
-  
+
         event.target.value = value;
     }
-  
+
     function checkInputUsername() {
         const usernameValue = username.value;
-  
+
         if (usernameValue === "") {
             errorInput(username, "Informe seu nome");
         } else {
@@ -41,35 +49,34 @@ document.addEventListener('DOMContentLoaded', () => {
             formItem.className = "form-content";
         }
     }
-  
+
     function checkInputEmail() {
-        const emailValue = email.value.trim(); 
-    
+        const emailValue = email.value.trim();
+
         const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.(com|cn|net)$/;
-    
+
         if (emailValue === "") {
             errorInput(email, "Informe um E-mail válido!");
-        } 
-        else if (!emailPattern.test(emailValue)) {
+        } else if (!emailPattern.test(emailValue)) {
             errorInput(email, "Informe um e-mail válido");
         } else {
             const formItem = email.parentElement;
             formItem.className = "form-content";
         }
     }
-  
+
     function checkInputMobile() {
         const mobileValue = mobile.value;
-  
-        if (mobileValue.length <= 12) { 
+
+        if (mobileValue.length <= 12) {
             errorInput(mobile, "Informe um número de telefone válido");
         } else {
             const formItem = mobile.parentElement;
             formItem.className = "form-content";
         }
     }
-    
-    function checkInputEnergia() {
+
+    /*function checkInputEnergia() {
         const energiaValue = energia.value.trim();
         const formItem = energia.parentElement;
 
@@ -78,38 +85,39 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             formItem.className = "form-content";
         }
-    }
+    }*/
 
     function checkForm() {
         checkInputUsername();
         checkInputEmail();
         checkInputMobile();
-        checkInputEnergia();
-  
-        const formItems = form.querySelectorAll(".form-content");
-  
-        const isValid = [...formItems].every((item) => {
-            return item.className === "form-content";
-        });
-  
-        if (isValid) {
-            console.log("username: " + username.value);
-            console.log("email: " + email.value);
-            console.log("phone: " + mobile.value);
-            document.getElementById("form").reset();
-            alert("TUDO SAFE MEU PATRAO");
-            return true;
+
+        const usernameValue = username.value.trim();
+        const emailValue = email.value.trim();
+        const mobileValue = mobile.value.trim();
+        const energiaValue = energia.value.trim();
+
+        if (usernameValue === "" || emailValue === "" || mobileValue === "" || energiaValue === "") {
+            alert("PREENCHA TODOS OS CAMPOS PARA REALIZAR O SUBMIT!");
+            return false;
         }
+
+        console.log("username: " + username.value);
+        console.log("email: " + email.value);
+        console.log("phone: " + mobile.value);
+        console.log("energia: " + energia.value);
+        document.getElementById("form").reset();
+        alert("TUDO SAFE MEU PATRAO");
+        return true;
     }
-  
+
     function errorInput(input, message) {
         const formItem = input.parentElement;
         const textMessage = formItem.querySelector("a");
-  
-        if(input === document.activeElement) {
+
+        if (input === document.activeElement) {
             textMessage.innerText = message;
-            formItem.className = "form-content error";
+            formItem.className = "form-content error";  
         }
     }
-  });
-  
+});
