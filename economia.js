@@ -4,18 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById("email");
     const mobile = document.getElementById("mobile");
     const energia = document.getElementById("energia");
-    const inputField = document.getElementById('energia');
     const resultField = document.getElementById('resultado');
+    const resultMesField = document.getElementById('resultadoMes');
 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         checkForm();
     });
 
-    inputField.addEventListener('input', () => {
-        const inputValue = parseFloat(inputField.value) || 0;
+    energia.addEventListener('input', () => {
+        const inputValue = parseFloat(energia.value) || 0;
         const result = inputValue + (inputValue * 0.2);
+        const resultMes = inputValue * 0.1;
+
         resultField.value = result.toFixed(2);
+        resultMesField.value = resultMes.toFixed(2);
     });
 
     username.addEventListener('input', checkInputUsername);
@@ -76,17 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /*function checkInputEnergia() {
-        const energiaValue = energia.value.trim();
-        const formItem = energia.parentElement;
-
-        if (isNaN(energiaValue) || energiaValue === "") {
-            errorInput(energia, "Informe um valor numérico válido");
-        } else {
-            formItem.className = "form-content";
-        }
-    }*/
-
     function checkForm() {
         checkInputUsername();
         checkInputEmail();
@@ -106,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("email: " + email.value);
         console.log("phone: " + mobile.value);
         console.log("energia: " + energia.value);
-        document.getElementById("form").reset();
+        form.reset();
         alert("TUDO SAFE MEU PATRAO");
         return true;
     }

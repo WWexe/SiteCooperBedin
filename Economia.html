@@ -86,10 +86,17 @@
             <input type="number" id="energia" maxlength="10" placeholder="Valor mensal da sua conta de energia"/>
             <a>Informe um numero válido</a>
           </div>
-          <div class="form-content">
-            <label for="result" class="result-t">Economia Anual Aproximada</label>
-            <span class="text-result">R$</span>
-            <input type="text" id="resultado" maxlength="10" readonly/>
+          <div class="form-result-container">
+            <div class="form-result">
+              <label for="result" class="result-t">Economia Anual Aproximada</label>
+              <span class="text-result">R$</span>
+              <input type="text" id="resultado" maxlength="10" readonly/>
+            </div>
+            <div class="form-result">
+              <label for="result" class="result-t">Economia Mensal Aproximada</label>
+              <span class="text-result">R$</span>
+              <input type="text" id="resultadoMes" maxlength="10" readonly/>
+            </div>
           </div>
           <button type="submit">Cadastrar</button>
         </form>

@@ -65,14 +65,12 @@ header {
   justify-content: center;
   list-style: none;
 }
-
 .nav-link {
   text-decoration: none;
   font-size: 0.9rem;
   color: #fff;
   font-weight: 500;
 }
-
 .nav-bar .nav-list li a {
   padding: 23px 15px 17px 15px;
   color: var(--white);
@@ -90,22 +88,18 @@ header {
   border-radius: 5px;
   background-color: var(--red);
 }
-
 .login-button button a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
 }
-
 .mobile-menu-icon {
     display: none;
 }
-
 .mobile-menu {
     display: none;
 }
-
 @media screen and (max-width: 991px) {
     .nav-bar {
         padding: 1.5rem 4rem;
@@ -158,7 +152,6 @@ header {
     background-position: center;
     z-index: 1;
 }
-
 .back-main h1 {
     position: absolute;
     top: 50%;
@@ -170,14 +163,12 @@ header {
     font-family: 'Bebas Neue', sans-serif;
     text-align: center;
 }
-
 .content {
     display: flex;
     justify-content: center; 
     align-items: center;
     text-align: center;
 }
-
 .icon-main {
     width: 650px;
     position: absolute;
@@ -186,12 +177,10 @@ header {
     transform: translate(-50%, -50%);
     opacity: 0.9;
 }
-
 body {
     flex: 1; 
     background-color: var(--white);
 }
-
 main {
   width: 100%;
   display: flex;
@@ -199,7 +188,6 @@ main {
   align-items: center;
   padding: 0 10rem;
 }
-
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -207,7 +195,6 @@ main {
   width: 100%;
   max-width: 1150px;
 }
-
 .container {
   background-color: #fafafa;
   border-radius: 14px;
@@ -242,11 +229,9 @@ main {
   text-align: center;
   color: #FFF;
 }
-
 .form{
   padding: 18px;
 }
-
 .form-content{
   margin-bottom: 8px;
   padding-bottom: 10px;
@@ -265,20 +250,47 @@ main {
   padding: 8px;
   border: 2px solid #dfdfdf;
 }
+.form-result{
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  
+.form-result label{
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.form-result input{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #dfdfdf;
+  }
+
 .form-content .result-t label {
     text-align: center;
 }
-#resultado {
-    width: 70%;
-    margin-left: 15%;
-    background-color: green;
-    color: white;
+.form-result-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
 }
 
+.form-result-container .form-result {
+    display: flex;
+    flex-direction: column; 
+}
+#resultado, #resultadoMes {
+    width: 100%;
+    background-color: green;
+    color: white;
+    font-weight: 600;
+    user-select: none;
+}
 #mobile {
     width: 50%;
 }
-
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -336,7 +348,11 @@ footer {
     font-size: 12px;
     line-height: 30px;
 }
-
+@media (max-width: 1200px){
+    main{
+        padding: 0 4rem;
+    }
+}
 @media (max-width: 992px) {
     .itens-footer, .itens-footer1, .itens-footer2 {
         font-size: 10px;
@@ -350,7 +366,26 @@ footer {
         flex-direction: column;
         gap: 0.5rem;
     }
-
+    main {
+        flex-direction: column;
+        padding: 0 2rem;
+      }
+    
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .container, .side-text {
+        width: 100%;
+        max-width: none;
+      }
+      
+      .side-text {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
     footer {
         padding: 15px;
     }
@@ -392,15 +427,13 @@ footer {
     transform: scale(1.1);
 }
 
+
 @media (max-width: 1024px) {
     .main {
         display: block;
     }
     .icon-main {
         width: 80%;
-    }
-    .list-menu {
-        height: 20%;
     }
 }
 @media (max-width: 992px) {
