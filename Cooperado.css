@@ -194,11 +194,48 @@ header {
     opacity: 0.9;
 }
 
+
 main {
     flex: 1; 
     padding: 20px;
     box-sizing: border-box; 
     background-color: var(--white);
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.side-text {
+    font-family: "Bebas Neue", sans-serif;  
+    color: #000000;
+    margin: 14px;
+    max-width: 600px;
+    width: 50%; 
+    padding: 20px;
+    order: 1; 
+    box-sizing: border-box;
+}
+
+.image-content {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 50%; 
+    order: 2;
+    text-align: right;
+}
+
+.image-content img {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 14px;
 }
 
 /*--------------Footer---------------*/

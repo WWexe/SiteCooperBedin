@@ -161,6 +161,12 @@ header {
     z-index: 1;
 }
 
+@media (max-width: 480px) {
+    .back-main {
+        background-position-y: -14rem;
+    }
+}
+
 .back-main h1 {
     position: absolute;
     top: 50%;
