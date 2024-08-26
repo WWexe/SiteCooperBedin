@@ -50,16 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkInputEmail() {
         const emailValue = email.value.trim(); 
     
-        // Expressão regular que não permite letras maiúsculas
         const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.(com|cn|net)$/;
     
         const formItem = email.parentElement;
 
-        // Verifica se o e-mail está vazio
         if (emailValue === "") {
             errorInput(email, "Informe um E-mail válido!");
         } 
-        // Verifica se o e-mail corresponde ao padrão
         else if (!emailPattern.test(emailValue)) {
             errorInput(email, "Informe um e-mail válido");
         } else {
@@ -115,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const formItem = input.parentElement;
         const textMessage = formItem.querySelector("a");
 
-        // Exibe a mensagem de erro apenas se o campo foi interagido
         if (input === document.activeElement) {
             textMessage.innerText = message;
             formItem.className = "form-content error";

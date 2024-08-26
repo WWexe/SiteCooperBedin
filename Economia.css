@@ -251,14 +251,18 @@ main {
   border: 2px solid #dfdfdf;
 }
 .form-result{
-    margin-bottom: 8px;
-    padding-bottom: 10px;
-    position: relative;
+    flex: 1;
+    background-color: #f1f1f1; /* Cor de fundo suave para contraste */
+    border-radius: 8px; /* Canto arredondado */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
 .form-result label{
-    display: inline-block;
-    margin-bottom: 4px;
+    display: block;
+    font-weight: bold; /* Destaque para o texto do rótulo */
+    color: #333; /* Cor do texto */
+    margin-bottom: 8px; /* Espaçamento entre o rótulo e o campo */
 }
 .form-result input{
     display: block;
@@ -266,7 +270,7 @@ main {
     border-radius: 8px;
     padding: 8px;
     border: 2px solid #dfdfdf;
-  }
+}
 
 .form-content .result-t label {
     text-align: center;
@@ -275,6 +279,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0px;
+    gap: 20px; /* Adiciona espaço entre os elementos */
 }
 
 .form-result-container .form-result {
@@ -286,7 +291,8 @@ main {
     background-color: green;
     color: white;
     font-weight: 600;
-    user-select: none;
+    user-select: none; /* Impede a seleção de texto */
+    pointer-events: none; /* Impede interações do mouse */
 }
 #mobile {
     width: 50%;
@@ -385,10 +391,9 @@ footer {
         text-align: center;
         margin-bottom: 20px;
       }
-    }
-    footer {
+       footer {
         padding: 15px;
-    }
+      }
 }
 
 @media (max-width: 480px) {

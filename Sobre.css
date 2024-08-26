@@ -15,6 +15,8 @@
 body, html {
     overflow-x: hidden;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /*--------------- HEADER NAVIGATION ---------------*/
@@ -33,6 +35,7 @@ header {
   top: 0;
   left: 0;
 }
+
 
 .logo {
   display: flex;
@@ -144,7 +147,6 @@ header {
         display: block;
     }
 }
-
 /*---------------MAIN-CONTENT----------------*/
 
 .back-main {
@@ -168,7 +170,6 @@ header {
 
 main {
     flex: 1; 
-    padding: 20px;
     box-sizing: border-box; 
     background-color: var(--white);
 }
@@ -254,7 +255,7 @@ footer {
     }
     .icon-main {
         width: 80%;
-    }
+    } 
 }
 
 @media (max-width: 768px) {
@@ -272,7 +273,8 @@ footer {
     html {
         font-size: 80%;
     }
+
     .itens-footer, .itens-footer1, .itens-footer2 {
-        font-size: 8px;
-    }   
+        font-size: 7px;
+    }
 }
