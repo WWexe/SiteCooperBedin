@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse a Área do Cooperado da Cooper Bedin.">
+    <title>Área do Cooperado | Cooper Bedin</title>
+    <link rel="icon" href="Images/whiteLogoCooperBedin.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="loginPage.css">
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ===================== HEADER / NAVEGAÇÃO ===================== -->
+    <header class="site-header">
+        <div class="container site-header__bar">
+            <a href="home.html" class="logo" aria-label="Cooper Bedin — página inicial">COOPER<span> BEDIN</span></a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+                <img src="Images/menu_white_36dp.svg" alt="" width="32" height="32">
+            </button>
+
+            <nav id="menu-principal" class="site-nav" aria-label="Navegação principal">
+                <ul class="site-nav__list">
+                    <li><a href="home.html" class="site-nav__link">Início</a></li>
+                    <li><a href="Economia.html" class="site-nav__link">Simule sua Economia</a></li>
+                    <li><a href="Cooperado.html" class="site-nav__link">Seja Cooperado</a></li>
+                    <li><a href="Gerador.html" class="site-nav__link">Seja Parceiro</a></li>
+                    <li><a href="Sobre.html" class="site-nav__link">Sobre Nós</a></li>
+                    <li><a href="Contato.html" class="site-nav__link">Contato</a></li>
+                </ul>
+                <div class="site-nav__cta">
+                    <a href="loginPage.html" class="btn btn--primary">Sou Cooperado</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+    <main id="conteudo" class="login">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-card__header">
+                    <h1>Área do <span>cooperado</span></h1>
+                    <p class="badge">Em breve</p>
+                </div>
+
+                <form id="form-login" class="form" novalidate>
+                    <p>Acesse para acompanhar seus créditos de energia e a economia na sua conta.</p>
+
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="nome@exemplo.com.br" aria-describedby="email-error">
+                        <p class="field__error" id="email-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="senha">Senha</label>
+                        <div class="password">
+                            <input type="password" id="senha" name="senha" autocomplete="current-password" aria-describedby="senha-error">
+                            <button type="button" id="toggle-senha" class="password__toggle" aria-pressed="false" aria-controls="senha">Mostrar</button>
+                        </div>
+                        <p class="field__error" id="senha-error" aria-live="polite"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--block">Entrar</button>
+
+                    <div id="login-status" class="form-status" role="status" aria-live="polite"></div>
+
+                    <div class="login__links">
+                        <a href="Contato.html?assunto=outro">Esqueci minha senha</a>
+                        <a href="Cooperado.html">Ainda não é cooperado? Saiba como participar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__grid">
+                <div>
+                    <p class="logo">COOPER<span> BEDIN</span></p>
+                    <p>Cooperativa de Energias Renováveis</p>
+                    <address class="mt-2">
+                        <p>Rua Mitugoro Tanaka, 85, Sala 2 — Parque Industrial, Toledo/PR</p>
+                        <p><a href="tel:+5545991145983">(45) 99114-5983</a></p>
+                        <p><a href="mailto:contato@cooperbedin.com.br">contato@cooperbedin.com.br</a></p>
+                        <p><a href="https://www.instagram.com/cooperativabedin/" target="_blank" rel="noopener">@cooperativabedin no Instagram</a></p>
+                    </address>
+                </div>
+                <nav aria-label="Links do rodapé">
+                    <ul class="site-footer__links">
+                        <li><a href="Economia.html">Simule sua economia</a></li>
+                        <li><a href="Cooperado.html">Seja cooperado</a></li>
+                        <li><a href="Gerador.html">Seja parceiro</a></li>
+                        <li><a href="Sobre.html">Sobre nós</a></li>
+                        <li><a href="Contato.html">Contato</a></li>
+                        <li><a href="loginPage.html">Área do cooperado</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="site-footer__copy">© 2023 Cooper Bedin — Cooperativa de Energias Renováveis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="forms.js"></script>
+    <script src="loginPage.js"></script>
+</body>
+</html>

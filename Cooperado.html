@@ -1,94 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Cooperado.css" />
-    <title>Cooperativa Bedin</title>
-  </head>
-  <body>
-    <!-------------------------HEADER-NAVIGATION----------------------------->
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <!--<img src="./images/whiteLogo.png" alt="Logo Cooperativa Bedin">-->
-                <h1>COOPER<span> BEDIN</span></h1>
-            </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="home.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="Economia.html" class="nav-link">Simule sua Economia</a></li>
-                    <li class="nav-item"><a href="Cooperado.html" class="nav-link">Seja Cooperado</a></li>
-                    <li class="nav-item"><a href="Cooperado.html" class="nav-link">Sou Cooperado</a></li>
-                    <li class="nav-item"><a href="Gerador.html" class="nav-link">Seja Parceiro</a></li>
-                    <li class="nav-item"><a href="Sobre.html" class="nav-link"> Sobre Nós</a></li>
-                </ul>
-            </div>
-            <div class="login-button">
-                <button><a href="#">Entrar</a></button>
-            </div>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Torne-se cooperado da Cooper Bedin e pague menos pela energia, com fontes 100% renováveis.">
+    <title>Seja Cooperado | Cooper Bedin</title>
+    <link rel="icon" href="Images/whiteLogoCooperBedin.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="Cooperado.css">
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="images/menu_white_36dp.svg" alt=""></button>
-            </div>
-        </nav>
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="home.html" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="Economia.html" class="nav-link">Simule sua Economia</a></li>
-                <li class="nav-item"><a href="Cooperado.html" class="nav-link">Seja Cooperado</a></li>
-                <li class="nav-item"><a href="Cooperado.html" class="nav-link">Sou Cooperado</a></li>
-                <li class="nav-item"><a href="Gerador.html" class="nav-link">Seja Parceiro</a></li>
-                <li class="nav-item"><a href="Sobre.html" class="nav-link"> Sobre Nós</a></li>
-            </ul>
-            <div class="login-button">
-                <button><a href="#">Entrar</a></button>
-            </div>
+    <!-- ===================== HEADER / NAVEGAÇÃO ===================== -->
+    <header class="site-header">
+        <div class="container site-header__bar">
+            <a href="home.html" class="logo" aria-label="Cooper Bedin — página inicial">COOPER<span> BEDIN</span></a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+                <img src="Images/menu_white_36dp.svg" alt="" width="32" height="32">
+            </button>
+
+            <nav id="menu-principal" class="site-nav" aria-label="Navegação principal">
+                <ul class="site-nav__list">
+                    <li><a href="home.html" class="site-nav__link">Início</a></li>
+                    <li><a href="Economia.html" class="site-nav__link">Simule sua Economia</a></li>
+                    <li><a href="Cooperado.html" class="site-nav__link" aria-current="page">Seja Cooperado</a></li>
+                    <li><a href="Gerador.html" class="site-nav__link">Seja Parceiro</a></li>
+                    <li><a href="Sobre.html" class="site-nav__link">Sobre Nós</a></li>
+                    <li><a href="Contato.html" class="site-nav__link">Contato</a></li>
+                </ul>
+                <div class="site-nav__cta">
+                    <a href="loginPage.html" class="btn btn--primary">Sou Cooperado</a>
+                </div>
+            </nav>
         </div>
     </header>
-    <script src="mobileNav.js"></script>
-<!------------------------------MAIN-CONTENT---------------------------------->
-    <div class="back-main">
-        <h1>Seja Parceiro<span> Bedin</span></h1>
-    </div>
-    <main>
-        <div class="content">
-            <h1>Seja Cooperador</h1>
-        </div>
-        <div class="wrapper">
-            <div class="side-text">
-              <h1>Energia Limpa Mais Barata</h1>
-              <h4>Sua economia começa em 15% na bandeira <span id="verde">verde</span>, chegando até 25% na bandeira de <span id="vermelho">escassez hídrica</span>
-              </h4>
+
+    <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+    <main id="conteudo">
+        <section class="hero hero--cooperado">
+            <div>
+                <h1 class="hero__title">Seja <span>cooperado</span></h1>
+                <p class="hero__subtitle">Energia limpa, mais barata e sem complicação.</p>
             </div>
-            <div class="image-content">
-                <img src="./Images/economizando.jpg" alt="economia">
+        </section>
+
+        <section class="section">
+            <div class="container split">
+                <div>
+                    <h2>Energia limpa <span class="highlight">mais barata</span></h2>
+                    <p class="lead">Sua economia começa em 15% na bandeira <span class="tag tag--verde">verde</span>, chegando até 25% na bandeira de <span class="tag tag--vermelho">escassez hídrica</span>.</p>
+                    <p>Ao se tornar cooperado da Cooper Bedin, você passa a receber os benefícios da energia gerada pelas nossas usinas renováveis. Na prática, isso significa uma conta de luz menor e a tranquilidade de consumir energia de forma mais sustentável.</p>
+                    <p>O cooperativismo coloca as pessoas no centro: cada cooperado faz parte de uma rede que cresce junto e compartilha resultados.</p>
+                    <div class="btn-group">
+                        <a href="Economia.html" class="btn btn--primary">Simule sua economia</a>
+                    </div>
+                </div>
+                <img src="Images/economizando.jpg" alt="Mãos usando uma calculadora ao lado de um cofrinho e pilhas de moedas" width="1000" height="667" loading="lazy">
             </div>
-        </div>
+        </section>
+
+        <section class="section section--surface" aria-labelledby="titulo-vantagens">
+            <div class="container">
+                <div class="text-center">
+                    <h2 id="titulo-vantagens">Vantagens de ser <span class="highlight">cooperado</span></h2>
+                    <p class="lead">Benefícios pensados para residências, comércios e empresas.</p>
+                </div>
+                <ul class="grid grid--4 mt-6">
+                    <li class="card">
+                        <span class="card__icon" aria-hidden="true">%</span>
+                        <h3>Economia na conta</h3>
+                        <p>Desconto sobre o valor da sua conta de luz, mês após mês.</p>
+                    </li>
+                    <li class="card">
+                        <span class="card__icon" aria-hidden="true">☀</span>
+                        <h3>Energia renovável</h3>
+                        <p>Consumo abastecido por fontes solar, eólica, hídrica e de biomassa.</p>
+                    </li>
+                    <li class="card">
+                        <span class="card__icon" aria-hidden="true">✓</span>
+                        <h3>Processo simples</h3>
+                        <p>Nossa equipe cuida da parte burocrática e acompanha você em cada etapa.</p>
+                    </li>
+                    <li class="card">
+                        <span class="card__icon" aria-hidden="true">♥</span>
+                        <h3>Atendimento próximo</h3>
+                        <p>Suporte de uma cooperativa regional, que conhece a realidade do oeste do Paraná.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="titulo-etapas">
+            <div class="container">
+                <div class="text-center">
+                    <h2 id="titulo-etapas">Como se <span class="highlight">associar</span></h2>
+                    <p class="lead">Quatro passos para começar a economizar.</p>
+                </div>
+                <ol class="grid grid--4 steps mt-6">
+                    <li class="card">
+                        <h3>Simule</h3>
+                        <p>Use o nosso simulador para estimar a sua economia mensal e anual.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Envie seus dados</h3>
+                        <p>Preencha o cadastro com suas informações e uma conta de luz recente.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Análise e adesão</h3>
+                        <p>Avaliamos o seu consumo e formalizamos a sua entrada na cooperativa.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Economize</h3>
+                        <p>Os créditos de energia passam a reduzir o valor da sua fatura.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="cta-band" aria-labelledby="titulo-cta">
+            <div class="container">
+                <h2 id="titulo-cta">Comece a economizar hoje</h2>
+                <p>Faça a sua simulação ou fale com a nossa equipe para tirar suas dúvidas.</p>
+                <div class="btn-group">
+                    <a href="Economia.html" class="btn btn--outline">Simular agora</a>
+                    <a href="Contato.html?assunto=cooperado" class="btn btn--outline">Falar com a equipe</a>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        <div class="main-content-footer">
-            <section class="section-footer">
-                <div class="itens-footer1">
-                    <p>Rua Mitugoro Tanaka, 85, Parque Industrial, Toledo/PR, Sala 2</p>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__grid">
+                <div>
+                    <p class="logo">COOPER<span> BEDIN</span></p>
+                    <p>Cooperativa de Energias Renováveis</p>
+                    <address class="mt-2">
+                        <p>Rua Mitugoro Tanaka, 85, Sala 2 — Parque Industrial, Toledo/PR</p>
+                        <p><a href="tel:+5545991145983">(45) 99114-5983</a></p>
+                        <p><a href="mailto:contato@cooperbedin.com.br">contato@cooperbedin.com.br</a></p>
+                        <p><a href="https://www.instagram.com/cooperativabedin/" target="_blank" rel="noopener">@cooperativabedin no Instagram</a></p>
+                    </address>
                 </div>
-                <div class="itens-footer">
-                    <p>45 99114-5983</p>
-                </div>
-                <div class="itens-footer">
-                    <p>@cooperativabedin</p>
-                </div>
-                <div class="itens-footer">
-                    <p>contato@cooperbedin.com.br</p>
-                </div>
-            </section>
-            <section class="section-footer">
-                <div class="itens-footer">
-                    <p>COPYRIGHT ©2023, COOPER BEDIN - COOPERATIVA DE ENERGIAS RENOVÁVEIS - TODOS OS DIREITOS RESERVADOS.</p>
-                </div>
-            </section>
+                <nav aria-label="Links do rodapé">
+                    <ul class="site-footer__links">
+                        <li><a href="Economia.html">Simule sua economia</a></li>
+                        <li><a href="Cooperado.html">Seja cooperado</a></li>
+                        <li><a href="Gerador.html">Seja parceiro</a></li>
+                        <li><a href="Sobre.html">Sobre nós</a></li>
+                        <li><a href="Contato.html">Contato</a></li>
+                        <li><a href="loginPage.html">Área do cooperado</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="site-footer__copy">© 2023 Cooper Bedin — Cooperativa de Energias Renováveis. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="sobre.js"></script>
+
+    <script src="nav.js"></script>
 </body>
 </html>

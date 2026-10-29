@@ -1,129 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Economia.css" />
-    <title>Cooperativa Bedin</title>
-  </head>
-  <body>
-    <!-------------------------HEADER-NAVIGATION----------------------------->
-    <header>
-      <nav class="nav-bar">
-          <div class="logo">
-            <!--<img src="./images/whiteLogo.png" alt="Logo Cooperativa Bedin">-->
-            <h1>COOPER<span> BEDIN</span></h1>
-          </div>
-          <div class="nav-list">
-              <ul>
-                <li class="nav-item"><a href="home.html" class="nav-link">Início</a></li>
-                  <li class="nav-item"><a href="Economia.html" class="nav-link">Simule sua Economia</a></li>
-                  <li class="nav-item"><a href="Cooperado.html" class="nav-link">Seja Cooperado</a></li>
-                  <li class="nav-item"><a href="Cooperado.html" class="nav-link">Sou Cooperado</a></li>
-                  <li class="nav-item"><a href="Gerador.html" class="nav-link">Seja Parceiro</a></li>
-                  <li class="nav-item"><a href="Sobre.html" class="nav-link"> Sobre Nós</a></li>
-              </ul>
-          </div>
-          <div class="login-button">
-              <button><a href="#">Entrar</a></button>
-          </div>
-          <div class="mobile-menu-icon">
-              <button onclick="menuShow()"><img class="icon" src="images/menu_white_36dp.svg" alt=""></button>
-          </div>
-      </nav>
-      <div class="mobile-menu">
-          <ul>
-            <li class="nav-item"><a href="home.html" class="nav-link">Início</a></li>
-            <li class="nav-item"><a href="Economia.html" class="nav-link">Simule sua Economia</a></li>
-            <li class="nav-item"><a href="Cooperado.html" class="nav-link">Seja Cooperado</a></li>
-            <li class="nav-item"><a href="Cooperado.html" class="nav-link">Sou Cooperado</a></li>
-            <li class="nav-item"><a href="Gerador.html" class="nav-link">Seja Parceiro</a></li>
-            <li class="nav-item"><a href="Sobre.html" class="nav-link"> Sobre Nós</a></li>
-          </ul> 
-          <div class="login-button">
-              <button><a href="#">Entrar</a></button>
-          </div>
-      </div>
-  </header>
-  <script src="mobileNav.js"></script>
-<!------------------------------MAIN-CONTENT------------------------------->
-    <div class="back-main">
-        <h1>Simule sua Economia</h1>
-    </div>
-    <!--<div class="content">
-        <h1>Simule sua Economia</h1>
-    </div>-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simule quanto você pode economizar na conta de luz com a energia limpa da Cooper Bedin.">
+    <title>Simule sua Economia | Cooper Bedin</title>
+    <link rel="icon" href="Images/whiteLogoCooperBedin.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="Economia.css">
+</head>
 <body>
-  <main>
-    <div class="wrapper">
-      <div class="side-text">
-        <h1>Energia Limpa Mais Barata</h1>
-        <h4>Sua economia começa em 15% na bandeira <span id="verde">verde</span>, chegando até 25% na bandeira de <span id="vermelho">escassez hídrica</span>
-        </h4>
-      </div>
-      <div class="container">
-        <section class="header">
-          <h2>Nova conta</h2>
-        </section>
-        <form id="form" class="form">
-          <div class="form-content">
-            <label for="username">Nome Completo</label>
-            <input type="text" id="username" placeholder="Nome Completo" />
-            <a>Informe um nome válido</a> 
-          </div>
-          <div class="form-content">
-            <label for="email">Seu melhor Email</label>
-            <input type="email" id="email" placeholder="Seu Email"/>
-            <a>Informe um e-mail válido</a>
-          </div>
-          <div class="form-content">
-            <label for="mobile">Celular</label>
-            <input type="text" id="mobile" maxlength="13" placeholder="DD 99999-9999" />
-            <a>Informe um numero válido</a>
-          </div>
-          <div class="form-content">
-            <label for="valor">Valor Mensal Conta de Luz</label>
-            <input type="text" id="energia" maxlength="10" size="10" placeholder="Valor mensal da sua conta de energia"/>
-            <a>Informe um numero válido</a>
-          </div>
-          <div class="form-result-container">
-            <div class="form-result">
-              <label for="result" class="result-t">Economia Anual Aproximada</label>
-              <input type="text" id="resultado" maxlength="10" readonly/>
-            </div>
-            <div class="form-result">
-              <label for="result" class="result-t">Economia Mensal Aproximada</label>
-              <input type="number" id="resultadoMes" max="10" readonly/>
-            </div>
-          </div>
-          <button type="submit">Cadastrar</button>
-        </form>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div class="main-content-footer">
-        <section class="section-footer">
-            <div class="itens-footer1">
-                <p>Rua Mitugoro Tanaka, 85, Parque Industrial, Toledo/PR, Sala 2</p>
-            </div>
-            <div class="itens-footer">
-                <p>45 99114-5983</p>
-            </div>
-            <div class="itens-footer">
-                <p>@cooperativabedin</p>
-            </div>
-            <div class="itens-footer">
-                <p>contato@cooperbedin.com.br</p>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ===================== HEADER / NAVEGAÇÃO ===================== -->
+    <header class="site-header">
+        <div class="container site-header__bar">
+            <a href="home.html" class="logo" aria-label="Cooper Bedin — página inicial">COOPER<span> BEDIN</span></a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+                <img src="Images/menu_white_36dp.svg" alt="" width="32" height="32">
+            </button>
+
+            <nav id="menu-principal" class="site-nav" aria-label="Navegação principal">
+                <ul class="site-nav__list">
+                    <li><a href="home.html" class="site-nav__link">Início</a></li>
+                    <li><a href="Economia.html" class="site-nav__link" aria-current="page">Simule sua Economia</a></li>
+                    <li><a href="Cooperado.html" class="site-nav__link">Seja Cooperado</a></li>
+                    <li><a href="Gerador.html" class="site-nav__link">Seja Parceiro</a></li>
+                    <li><a href="Sobre.html" class="site-nav__link">Sobre Nós</a></li>
+                    <li><a href="Contato.html" class="site-nav__link">Contato</a></li>
+                </ul>
+                <div class="site-nav__cta">
+                    <a href="loginPage.html" class="btn btn--primary">Sou Cooperado</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+    <main id="conteudo">
+        <section class="hero hero--economia">
+            <div>
+                <h1 class="hero__title">Simule sua <span>economia</span></h1>
+                <p class="hero__subtitle">Descubra quanto a energia limpa pode reduzir a sua conta de luz.</p>
             </div>
         </section>
-        <section class="section-footer">
-            <div class="itens-footer">
-                <p>COPYRIGHT ©2023, COOPER BEDIN - COOPERATIVA DE ENERGIAS RENOVÁVEIS - TODOS OS DIREITOS RESERVADOS.</p>
+
+        <section class="section">
+            <div class="container simulador">
+                <div>
+                    <h2>Energia limpa <span class="highlight">mais barata</span></h2>
+                    <p class="lead">Sua economia começa em 15% na bandeira <span class="tag tag--verde">verde</span>, chegando até 25% na bandeira de <span class="tag tag--vermelho">escassez hídrica</span>.</p>
+
+                    <ul class="checklist">
+                        <li>Energia gerada por usinas renováveis da cooperativa.</li>
+                        <li>Economia calculada sobre o valor mensal da sua conta.</li>
+                        <li>Atendimento próximo para tirar todas as suas dúvidas.</li>
+                    </ul>
+
+                    <p class="note">Os valores apresentados são estimativas e podem variar de acordo com a bandeira tarifária vigente e o seu perfil de consumo.</p>
+                </div>
+
+                <div class="form-card">
+                    <div class="form-card__header">
+                        <h2>Faça sua simulação</h2>
+                    </div>
+
+                    <form id="form-simulador" class="form" novalidate>
+                        <div class="field">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome completo" aria-describedby="nome-error">
+                            <p class="field__error" id="nome-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Seu melhor e-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="nome@exemplo.com.br" aria-describedby="email-error">
+                            <p class="field__error" id="email-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="celular">Celular</label>
+                            <input type="tel" id="celular" name="celular" inputmode="tel" autocomplete="tel-national" maxlength="13" placeholder="45 99999-9999" aria-describedby="celular-error">
+                            <p class="field__error" id="celular-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="conta">Valor mensal da conta de luz</label>
+                            <div class="input-prefix">
+                                <span aria-hidden="true">R$</span>
+                                <input type="text" id="conta" name="conta" inputmode="decimal" placeholder="250,00" aria-describedby="conta-error">
+                            </div>
+                            <p class="field__error" id="conta-error" aria-live="polite"></p>
+                        </div>
+
+                        <dl class="result" aria-live="polite">
+                            <div class="result__item">
+                                <dt>Economia mensal estimada</dt>
+                                <dd><output id="resultado-mes" for="conta">—</output></dd>
+                            </div>
+                            <div class="result__item">
+                                <dt>Economia anual estimada</dt>
+                                <dd><output id="resultado-ano" for="conta">—</output></dd>
+                            </div>
+                        </dl>
+
+                        <button type="submit" class="btn btn--primary btn--block">Quero economizar</button>
+
+                        <div id="simulador-status" class="form-status" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
             </div>
         </section>
-    </div>
-  </footer>
-  <script src="economia.js"></script>
+    </main>
+
+    <!-- ===================== RODAPÉ ===================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__grid">
+                <div>
+                    <p class="logo">COOPER<span> BEDIN</span></p>
+                    <p>Cooperativa de Energias Renováveis</p>
+                    <address class="mt-2">
+                        <p>Rua Mitugoro Tanaka, 85, Sala 2 — Parque Industrial, Toledo/PR</p>
+                        <p><a href="tel:+5545991145983">(45) 99114-5983</a></p>
+                        <p><a href="mailto:contato@cooperbedin.com.br">contato@cooperbedin.com.br</a></p>
+                        <p><a href="https://www.instagram.com/cooperativabedin/" target="_blank" rel="noopener">@cooperativabedin no Instagram</a></p>
+                    </address>
+                </div>
+                <nav aria-label="Links do rodapé">
+                    <ul class="site-footer__links">
+                        <li><a href="Economia.html">Simule sua economia</a></li>
+                        <li><a href="Cooperado.html">Seja cooperado</a></li>
+                        <li><a href="Gerador.html">Seja parceiro</a></li>
+                        <li><a href="Sobre.html">Sobre nós</a></li>
+                        <li><a href="Contato.html">Contato</a></li>
+                        <li><a href="loginPage.html">Área do cooperado</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="site-footer__copy">© 2023 Cooper Bedin — Cooperativa de Energias Renováveis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="forms.js"></script>
+    <script src="economia.js"></script>
 </body>
 </html>

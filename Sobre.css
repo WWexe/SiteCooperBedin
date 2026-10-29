@@ -1,280 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+/* =========================================================
+   Sobre.html — Quem Somos (o restante está em base.css)
+   ========================================================= */
 
-:root {
-    --red: rgba(255, 9, 9, 0.86);
-    --white: #fff;
-    --dark: #000;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-body, html {
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
+.hero--sobre {
     flex-direction: column;
+    gap: var(--space-2);
+    background-image: linear-gradient(rgba(29, 29, 29, 0.25), rgba(29, 29, 29, 0.25)),
+                      url("Images/energyBackground.jfif");
 }
 
-/*--------------- HEADER NAVIGATION ---------------*/
-
-header {
-    background-color: var(--dark);
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-}
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.6rem 5rem;
-  top: 0;
-  left: 0;
-}
-
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo h1 {
-  font-family: "Bebas Neue", sans-serif;
-  color: #fff;
-}
-
-.logo img {
-  width: 40px;
-  height: auto;
-}
-
-.logo span {
-  font-family: "Bebas Neue", sans-serif;
-  color: red;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-size: 0.9rem;
-  color: #fff;
-  font-weight: 500;
-}
-
-.nav-bar .nav-list li a {
-  padding: 23px 15px 17px 15px;
-  color: var(--white);
-  font-weight: 500;
-  transition: all 200ms ease-in;
-}
-
-.nav-list ul li a:hover {
-  background-color: #2b2b2b;
-  border-bottom: 4px solid red;
-}
-.login-button button {
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  background-color: var(--red);
-}
-
-.login-button button a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.mobile-menu-icon {
-    display: none;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-@media screen and (max-width: 991px) {
-    .nav-bar {
-        padding: 1.5rem 4rem;
-    }
-    .nav-item {
-        display: none;
-    }
-    .login-button {
-        display: none;
-    }
-    .mobile-menu-icon {
-        display: block;
-    }
-    .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 2rem;
-    }
-    .mobile-menu .login-button {
-        display: block;
-        padding: 1rem 2rem;
-    }
-    .mobile-menu .login-button button {
-        width: 100%;
-    }
-    .open {
-        display: block;
-    }
-}
-/*---------------MAIN-CONTENT----------------*/
-
-.back-main {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(rgba(29, 29, 29, 0.25), rgba(29, 29, 29, 0.25)), url("./Images/energyBackground.jfif");
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 1;
-}
-
-.icon-main {
-    width: 650px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.hero__logo {
+    width: min(420px, 70vw);
     opacity: 0.9;
 }
 
-main {
-    flex: 1; 
-    box-sizing: border-box; 
-    background-color: var(--white);
+/* Texto corrido da história com largura confortável de leitura */
+.prose {
+    max-width: 70ch;
 }
 
-/*--------------Footer---------------*/
+/* Cards das fontes de energia com imagem */
+.source {
+    padding: 0;
+    overflow: hidden;
+}
 
-footer {
-    background: var(--dark);
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.8);
-    color: var(--white);
-    text-align: center;
-    padding: 10px;
-    position: relative;
+.source img {
     width: 100%;
-    bottom: 0;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
 }
 
-.main-content-footer {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 12px;
-    line-height: 30px;
-}
-
-@media (max-width: 992px) {
-    .itens-footer, .itens-footer1, .itens-footer2 {
-        font-size: 10px;
-        gap: 0.6rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .itens-footer, .itens-footer1, .itens-footer2 {
-        font-size: 9px;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    footer {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .itens-footer, .itens-footer1, .itens-footer2 {
-        font-size: 8px;
-        gap: 0.3rem;
-    }
-
-    footer {
-        padding: 10px;
-    }
-
-    .main-content-footer {
-        padding: 0;
-    }
-
-    .section-footer {
-        padding: 0;
-    }
-}
-
-#botao-fixo {
-    position: fixed;
-    bottom: 60px;
-    right: 30px;
-    background: #fdeaea;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 60px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-#botao-fixo:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 1024px) {
-    .main {
-        display: block;
-    }
-    .icon-main {
-        width: 80%;
-    } 
-}
-
-@media (max-width: 768px) {
-    .section1 {
-        height: 100%;
-    }
-
-    .itens-footer, .itens-footer1, .itens-footer2 {
-        font-size: 10px;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    html {
-        font-size: 80%;
-    }
-
-    .itens-footer, .itens-footer1, .itens-footer2 {
-        font-size: 7px;
-    }
+.source__body {
+    padding: var(--space-3);
 }

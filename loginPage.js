@@ -1,34 +1,43 @@
-const { useState } = React;
+/* =========================================================
+   Área do Cooperado (loginPage.html)
+   Versão visual, sem autenticação real. Depende de forms.js.
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('form-login');
+    if (!form) return;
 
-function App() {
-  const [valor, setValor] = useState(0);
-  const [resultado, setResultado] = useState(0);
+    const email = document.getElementById('email');
+    const senha = document.getElementById('senha');
+    const toggleSenha = document.getElementById('toggle-senha');
+    const status = document.getElementById('login-status');
 
-  const handleInputChange = (e) => {
-    const inputValue = parseFloat(e.target.value) || 0;
-    setValor(inputValue);
-    setResultado(inputValue + inputValue * 0.2);
-  };
+    const { rules, bindValidation, showStatus } = FormUtils;
 
-  return (
-    <div style={{ padding: '20px' }}>
-      <h1>Calculadora de 20%</h1>
-      <form>
-        <label>
-          Valor:
-          <input
-            type="number"
-            value={valor}
-            onChange={handleInputChange}
-            style={{ marginLeft: '10px', padding: '5px', fontSize: '16px' }}
-          />
-        </label>
-      </form>
-      <div style={{ marginTop: '20px', fontSize: '18px' }}>
-        <p>Resultado: {resultado}</p>
-      </div>
-    </div>
-  );
-}
+    const validateAll = bindValidation([
+        { input: email, validate: rules.email },
+        { input: senha, validate: rules.required('sua senha') },
+    ]);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+    // Mostrar/ocultar senha
+    toggleSenha.addEventListener('click', () => {
+        const visivel = toggleSenha.getAttribute('aria-pressed') === 'true';
+        senha.type = visivel ? 'password' : 'text';
+        toggleSenha.setAttribute('aria-pressed', String(!visivel));
+        toggleSenha.textContent = visivel ? 'Mostrar' : 'Ocultar';
+    });
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (!validateAll()) {
+            showStatus(status, 'Revise os campos destacados para continuar.', 'error');
+            return;
+        }
+
+        // Sem back-end: a autenticação real ainda não existe.
+        showStatus(
+            status,
+            'A Área do Cooperado está em desenvolvimento. Em breve você poderá acompanhar seus créditos por aqui.'
+        );
+    });
+});
